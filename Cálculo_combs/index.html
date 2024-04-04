@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+    div{
+            text-align: center;
+        }
+    </style>]
+     <script>
+        function calccombs(){
+            let preço = document.getElementById("preço").value;
+            let consumo = document.getElementById("consumo").value;
+            let distancia = document.getElementById("distância").value;
+ 
+            console.log("Preço: " + altura);
+            console.log("Consumo: " + peso);
+            console.log("Distância: " + peso);
+ 
+            v1= preço/consumo;
+            v2= v1*distancia
+ 
+            console.log(v2);
+ 
+            let mensagem = "";
+ 
+           
+             console.log(mensagem);
+ 
+         document.getElementById("resultado").innerHTML = mensagem;
+ 
+        }
+ 
+     </script>
+</head>
+<body>
+    <div>
+        <div><h1>Cálculo de Combustível</h1></div>
+        <div>Digite o valor do Combustível</div>
+        <div><input id="preço"/></div>
+        <br>
+        <div>Digite o tipo de Combustível</div>
+        <div><input id="tipo"/></div>
+        <br>
+        <div>Digite o valor do Consumo</div>
+        <div><input id="consumo"/></div>
+        <br>
+        <div>Digite o valor da Distância</div>
+        <div><input id="distância"/></div>
+        <br>
+        <div><button onclick="calccombs()">Enviar</button></div>
+        <h3><span id="Resultado"></span></h3>
+    </div>   
+    
+</body>
+</html>

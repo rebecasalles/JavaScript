@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="Imagens/Favicon/favicon.ico" 
+    type="image/x-icon">
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function somar(){
+            var n1 = document.querySelectorAll("input")[0].value
+            var n2 = document.querySelectorAll("input")[1].value
+            var soma = parseFloat(n1) + parseFloat(n2);
+            alert(soma);
+        }
+        function subtrair(){
+            var n1 = document.querySelectorAll("input")[0].value
+            var n2 = document.querySelectorAll("input")[1].value
+            var subtrai = parseFloat(n1) - parseFloat(n2);
+            alert(subtrai);
+        }
+        function multiplicar(){
+            var n1 = document.querySelectorAll("input")[0].value
+            var n2 = document.querySelectorAll("input")[1].value
+            var multiplicar = parseFloat(n1) * parseFloat(n2);
+            alert(multiplicar);
+        }
+        function dividir(){
+            var n1 = document.querySelectorAll("input")[0].value
+            var n2 = document.querySelectorAll("input")[1].value
+            var dividir= parseFloat(n1) / parseFloat(n2);
+            alert(dividir);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <p>
+        <input type="number" placeholder="Primeiro número"  name="n1" id="n1"> 
+        <input type="number" placeholder="Segundo número"  name="n2" id="n2"> 
+        <br>
+        <br> 
+        <input type="button" value="Somar" onclick="somar()"> 
+        <input type="button" value="Subtrair" onclick="subtrair()"> 
+        <input type="button" value="Multiplicar" onclick="multiplicar()"> 
+        <input type="button" value="Dividir" onclick="dividir()"> 
+    </p>
+</body>
+</html>

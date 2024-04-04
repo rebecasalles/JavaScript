@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="shortcut icon" href="Imagens/Favicon/favicon.ico" 
+    type="image/x-icon">
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+    <script>
+       function calcularIMC(){
+           let altura = document.getElementById("altura").value;
+           let peso = document.getElementById("peso").value;
+
+           console.log("Altura: " + altura);
+           console.log("Peso: " + peso);
+
+           imc = peso / (altura * altura);
+
+           console.log(imc);
+
+           let mensagem = "";
+
+           if (imc < 18.5){
+               mensagem = "Abaixo do peso";
+           } else if (imc >= 18.5 && imc <= 24.9){
+               mensagem = "Peso normal";
+           } else if (imc >= 25 && imc <= 29.9){
+               mensagem = "Sobrepeso";
+           } else if (imc >= 30 && imc <= 34.9){
+               mensagem = "Obesidade grau I";
+           } else if (imc >= 35 && imc <= 39.9){
+               mensagem = "Obesidade grau II";
+           } else if (imc >= 40){
+               mensagem = "Obesidade mórbida";
+           }
+
+            console.log(mensagem);
+
+        document.getElementById("resultado").innerHTML = mensagem;
+
+       }
+
+    </script>
+</head>
+<body>
+    <div>
+        <div><h1>Calculadora de IMC</h1></div>
+        <div>Altura</div>
+        <div><input id="altura"/></div>
+
+        <div>Peso</div>
+        <div><input id="peso"/></div>
+
+        <div><button onclick="calcularIMC()">Calcular</button></div>
+
+        <div><h3 id="resultado"></h3></div>
+    </div>
+</body>
+</html>

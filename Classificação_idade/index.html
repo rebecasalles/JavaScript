@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+    <script>
+       function classificaridade(){
+           let id = document.getElementById("idade").value;
+
+           console.log("Idade: " + id);
+
+           console.log(id)
+
+           let mensagem = "";
+
+           if (id <= 10){
+               mensagem = "O indivíduo é criança e não está em maioridade penal";
+           } else if (id == 11){
+               mensagem = "O indivíduo é pré-adolescente e não está em maioridade penal";
+           } else if (id > 11 && id <= 17){
+               mensagem = "O indivíduo é adolecente e não está em maioridade penal";
+           } else if (id >= 18 && id <= 60){
+               mensagem = "O indivíduo é adulto e está em maioridade penal";
+           } else if (id >= 61){
+               mensagem = "O indivíduo é idoso e está em maioridade penal";
+           }
+
+            console.log(mensagem);
+
+        document.getElementById("Resultado").innerHTML = mensagem;
+
+       }
+
+    </script>
+</head>
+<body>
+    <div>
+        <div><h1>Classificação de idade</h1></div>
+        <div>Digite a idade em número: </div>
+        <div><input id="idade"/></div>
+        <br>
+        <div><button onclick="classificaridade()">Enviar</button></div>
+        <h3><span id="Resultado"></span></h3>
+    </div>   
+</body>
+</html>
